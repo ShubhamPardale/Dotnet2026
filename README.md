@@ -1,22 +1,62 @@
-dotnet new gitignore                  										                    // adds gitignore file
-dotnet -h                             										                    // shows us all dotnet commands 
-dotnet new --list                     										                    // shows list of projects we can create.(Console, WPF, WCF)
-dotnet new sln                        										                    // creates solution file
-dotnet new console -o DemoApp         										                    // creates console app with name DemoApp
-dotnet sln add DemoApp                                                        // adds DemoApp to solution file
-dotnet new classlib -o DemoLib                                                // creates class lib with name DemoLib
-dotnet add package Dapper                                                     // adds Dapper nuget package in project file 
-                                                                                 (always add package in specific project not in solution)
-dotnet add reference . ./DemoLib/DemoLib. csproj                              // adds reference of DemoLib to DemoApp
-dotnet restore                                                                // restores packages
-dotnet build                                                                  // builds solution
-dotnet clean                                                                  // cleans temp files
-dotnet run                                                                    // runs solution
-dotnet publish -p: PublishSingleFile=true -r win-x64 --self-contained true    // publishes the app where 
-   -p: PublishSingleFile=true means to publish all files in one executable file
-   -r win-x64 this is runtime identifier which is use to run this on specific runtime env only 
-   --self-contained true means it is self contained with the .NET runtime in it so we can run it on any machine
+**🚀 .NET CLI Quick Reference**
 
+**📁 Setup & Info**
 
+  dotnet new gitignore
+  ➡️ Adds a .gitignore file
 
+  dotnet -h
+  ➡️ Shows all available .NET CLI commands
+  
+  dotnet new --list
+  ➡️ Lists all project templates (Console, WPF, WCF, etc.)
 
+**🧱 Solution & Project Creation**
+
+  dotnet new sln
+  ➡️ Creates a solution file
+  
+  dotnet new console -o DemoApp
+  ➡️ Creates a console app named DemoApp
+  
+  dotnet new classlib -o DemoLib
+  ➡️ Creates a class library named DemoLib
+  
+  dotnet sln add DemoApp
+  ➡️ Adds DemoApp to the solution
+
+**🔗 References & Packages**
+
+  dotnet add DemoApp reference ./DemoLib/DemoLib.csproj
+  ➡️ Adds reference of DemoLib to DemoApp
+  
+  dotnet add DemoApp package Dapper
+  ➡️ Adds Dapper NuGet package
+  ⚠️ Always add packages to a specific project, not the solution
+
+**📦 Dependency Management**
+
+  dotnet restore
+  ➡️ Restores all packages
+
+**🛠️ Build & Run**
+
+  dotnet build
+  ➡️ Builds the solution
+  
+  dotnet clean
+  ➡️ Cleans temporary files
+  
+  dotnet run
+  ➡️ Runs the application
+
+📦 **Publish (Single Executable)**
+
+  dotnet publish -p:PublishSingleFile=true -r win-x64 --self-contained true
+  🔍 Explanation:
+  PublishSingleFile=true
+  ➡️ Bundles everything into one executable
+  -r win-x64
+  ➡️ Targets Windows 64-bit runtime
+  --self-contained true
+  ➡️ Includes the .NET runtime (runs on any machine)
