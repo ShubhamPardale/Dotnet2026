@@ -1,5 +1,6 @@
 **🚀 .NET CLI Quick Reference**
 
+
 **📁 Setup & Info**
 
   dotnet new gitignore
@@ -10,6 +11,7 @@
   
   dotnet new --list
   ➡️ Lists all project templates (Console, WPF, WCF, etc.)
+
 
 **🧱 Solution & Project Creation**
 
@@ -25,6 +27,7 @@
   dotnet sln add DemoApp
   ➡️ Adds DemoApp to the solution
 
+
 **🔗 References & Packages**
 
   dotnet add DemoApp reference ./DemoLib/DemoLib.csproj
@@ -34,10 +37,12 @@
   ➡️ Adds Dapper NuGet package
   ⚠️ Always add packages to a specific project, not the solution
 
+
 **📦 Dependency Management**
 
   dotnet restore
   ➡️ Restores all packages
+
 
 **🛠️ Build & Run**
 
@@ -49,6 +54,7 @@
   
   dotnet run
   ➡️ Runs the application
+
 
 📦 **Publish (Single Executable)**
 
